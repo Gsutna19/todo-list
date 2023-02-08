@@ -1,0 +1,27 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Todo List",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gsutna19/todo-list.git"
+  },
+  "keywords": [],
+  "author": "Gsutna19",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gsutna19/todo-list/issues"
+  },
+  "homepage": "https://github.com/Gsutna19/todo-list#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1"
+  }
+}
