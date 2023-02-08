@@ -17,10 +17,10 @@ function component() {
     
     btn.onclick = () => {
         let newTitle = document.getElementById("taskName").value;
-        const newItem = new Item(newTitle, "2", "3", "4", "5");
+        const newItem = new Item(newTitle, "2", "3", "5");
+        console.log(newItem);
         console.log(Check(newItem));
         console.log(Prio(newItem, 1));
-        console.log(newItem);
     }
     return element;
 }

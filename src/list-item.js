@@ -2,7 +2,7 @@
 
 // Create a single todo task
 export default class Item {
-    constructor(title, description, dueDate, priority = 0, notes, checked = false) {
+    constructor(title, description, dueDate, notes, priority = 0, checked = false) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
