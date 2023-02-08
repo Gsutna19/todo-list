@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        item: './src/list-item.js',
+        // item: './src/list-item.js',
+        // check: './src/'
     },
     plugins: [
         new HtmlWebpackPlugin({

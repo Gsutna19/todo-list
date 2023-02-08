@@ -1,4 +1,6 @@
 import Item from './list-item.js';
+import Check from './item-check';
+import Prio from './item-priority';
 export { component };
 
 function component() {
@@ -15,7 +17,9 @@ function component() {
     
     btn.onclick = () => {
         let newTitle = document.getElementById("taskName").value;
-        const newItem = new Item(newTitle, "2", "3", "4", "5", "6");
+        const newItem = new Item(newTitle, "2", "3", "4", "5");
+        console.log(Check(newItem));
+        console.log(Prio(newItem, 1));
         console.log(newItem);
     }
     return element;
