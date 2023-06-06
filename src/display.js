@@ -1,5 +1,27 @@
 // DOM Setter
-export { header };
+import Check from './item-check.js';
+import Prio from './item-priority.js';
+import Describe from './item-description.js';
+import Note from './item-notes.js';
+import Due from './item-due-date.js';
+export { content, sideBox, header, todo };
+
+// Display Todo
+const todo = document.createElement('div');
+// const itemName = document.createElement('h3');
+// itemName.innerHTML = "Head 3"
+const date = document.createElement('p');
+date.textContent = "Day 1";
+const priority = document.createElement('p');
+const description = document.createElement('p');
+const note = document.createElement('p');
+
+// itemName.classList.add('name');
+date.classList.add('date');
+priority.classList.add('prio');
+description.classList.add('description');
+note.classList.add('note');
+
 
 // Header Menu
 const header = document.createElement('ul');
@@ -14,5 +36,31 @@ op3.textContent = "View Project";
 header.appendChild(op1);
 header.appendChild(op2);
 header.appendChild(op3);
+console.log(header)
 
-// 
+// Content
+const content = document.createElement('div');
+content.classList.add('content');
+// Move code below to create todo item into create-item.js, check display TODO for rest of code
+// content.appendChild('itemName');
+// content.appendChild('date');
+// content.appendChild('priority');
+// content.appendChild('description');
+// content.appendChild('note');
+console.log(content)
+
+// Side Display
+const sideBox = document.createElement('div');
+const proList = document.createElement('h3');
+
+sideBox.classList.add('side');
+proList.textContent = "Projects";
+
+sideBox.appendChild(proList);
+
+//Main Display
+content.appendChild(sideBox);
+const items = document.createElement('div');
+items.classList.add('list');
+
+content.appendChild(items);

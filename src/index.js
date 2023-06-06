@@ -1,11 +1,12 @@
 import Item from './list-item.js';
+import './style.css';
 import Project from './project.js';
 import Check from './item-check.js';
 import Prio from './item-priority.js';
 import Describe from './item-description.js';
 import Note from './item-notes.js';
 import Due from './item-due-date.js';
-import { header } from './display.js';
+import { content, sideBox, header } from './display.js';
 export { component };
 
 function component() {
@@ -18,6 +19,7 @@ function component() {
     // element.innerHTML = "Hello from index js with webpack!";
 
     
+    // document.body.appendChild(element);
     document.body.appendChild(btn);
     
     btn.onclick = () => {
@@ -28,7 +30,7 @@ function component() {
         console.log(newItem);
         console.log(Check(newItem));
         console.log(Prio(newItem, 1));
-        console.log(newProject.add("First"));
+        // console.log(newProject.add("First"));
         console.log(Describe(newItem));
         console.log(Note(newItem));
         console.log(Due(newItem));
@@ -38,4 +40,6 @@ function component() {
     return element;
 }
 document.body.appendChild(header);
+// content.appendChild(component());
+document.body.appendChild(content);
 document.body.appendChild(component());
