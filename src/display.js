@@ -4,7 +4,7 @@ import Prio from './item-priority.js';
 import Describe from './item-description.js';
 import Note from './item-notes.js';
 import Due from './item-due-date.js';
-export { content, sideBox, header, todo };
+export { content, sideBox, header, todo, op1, op2, proList };
 
 // Display Todo
 const todo = document.createElement('div');
@@ -25,17 +25,15 @@ note.classList.add('note');
 
 // Header Menu
 const header = document.createElement('ul');
+header.classList.add('head-bar');
 const op1 = document.createElement('li');
 const op2 = document.createElement('li');
-const op3 = document.createElement('li');
 
 op1.textContent = "New Todo";
 op2.textContent = "New Project";
-op3.textContent = "View Project";
 
 header.appendChild(op1);
 header.appendChild(op2);
-header.appendChild(op3);
 console.log(header)
 
 // Content
@@ -51,15 +49,19 @@ console.log(content)
 
 // Side Display
 const sideBox = document.createElement('div');
-const proList = document.createElement('h3');
+const projects = document.createElement('div');
+const pro = document.createElement('h3');
 
 sideBox.classList.add('side');
-proList.textContent = "Projects";
+pro.textContent = "Projects";
 
-sideBox.appendChild(proList);
+const proList = document.createElement('ul');
+
+projects.appendChild(pro);
+sideBox.appendChild(projects);
 
 //Main Display
-content.appendChild(sideBox);
+// content.appendChild(sideBox);
 const items = document.createElement('div');
 items.classList.add('list');
 

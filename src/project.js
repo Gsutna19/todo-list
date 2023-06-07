@@ -2,7 +2,7 @@
 // import Item from './list-item.js';
 
 export default class Project {
-    constructor(name = "", id = 0) {
+    constructor(name = "New Project", id = 0) {
         this.name = name;
         this.id = id;
         this.list = [];

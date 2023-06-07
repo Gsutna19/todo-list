@@ -6,7 +6,7 @@ import Prio from './item-priority.js';
 import Describe from './item-description.js';
 import Note from './item-notes.js';
 import Due from './item-due-date.js';
-import { content, sideBox, header } from './display.js';
+import { content, sideBox, header, op1, op2, proList } from './display.js';
 export { component };
 
 function component() {
@@ -21,7 +21,22 @@ function component() {
     
     // document.body.appendChild(element);
     document.body.appendChild(btn);
+
+    // Add new todo task Logic
+    op1.onclick = () => {
+        // Create a popup text field for task name;
+        console.log("Add Task");
+    }
+
+    // Add New Project Logic
+    op2.onclick = () => {
+        // Create a popup text field for project name;
+        console.log("Add project");
+        console.log(new Project("Cook Pasta"));
+        // const list = new Project();
+    }
     
+
     btn.onclick = () => {
         let newTitle = document.getElementById("taskName").value;
         const newItem = new Item(newTitle);
@@ -40,6 +55,7 @@ function component() {
     return element;
 }
 document.body.appendChild(header);
+document.body.appendChild(sideBox);
 // content.appendChild(component());
 document.body.appendChild(content);
 document.body.appendChild(component());
